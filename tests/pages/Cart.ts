@@ -14,3 +14,7 @@ export async function getSubtotal(page: Page) {
   const subTotal = await productPrice.innerText();
   return subTotal;
 }
+
+export async function proceedToCheckout(page: Page) {
+  await page.locator('[data-test-id="proceed-to-checkout"]').click();
+}
